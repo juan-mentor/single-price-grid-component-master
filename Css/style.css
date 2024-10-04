@@ -1,0 +1,142 @@
+:root {
+ /********** COLORS *********/
+    /* Primary */
+
+    --cyan: hsl(179, 62%, 43%);
+    --light-cyan: hsla(179,62%,43%,0.8);
+    --bright-yellow: hsl(71, 73%, 54%);
+    
+    /* Neutral */
+    
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --white: hsl(0,100%,100%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Karla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-gray);
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+    
+.single-price {
+    width: 83%;
+    max-width: 640px;
+    display: grid;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.padding {
+    padding: 1.8rem 1.3rem;
+}
+
+.header {
+    width: 100%;
+    background-color: var(--white);
+}
+
+ .header__title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.9rem;
+    color: var(--cyan);
+ }   
+ 
+ .header__subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.4rem;
+    color: var(--bright-yellow);
+ } 
+
+.header__paragraph {
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: var(--grayish-blue);
+    opacity: 0.8;
+}
+
+.action {
+    background-color: var(--cyan);
+    color: var(--white);
+}
+
+.action__title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1.9rem;
+}
+
+.action__price {
+    font-size: 0.8rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+    
+.action__price span:first-child {
+    font-size: 1.7rem;
+}
+
+.action__price span:last-child {
+    opacity: 0.7;
+}
+    
+.action__paragraph {
+    color: var(--light-gray);
+    margin-bottom: 1.8rem;
+}   
+
+.action__btn {
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--bright-yellow);
+    color: var(--light-gray);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.action__btn:hover {
+    filter: brightness(1.2);
+    color: initial;
+    cursor: pointer;
+}
+
+.us {
+    background-color: var(--light-cyan);
+    color: var(--white);
+}
+
+.us__title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.us__paragraph {
+    color: var(--light-gray);
+    font-size: 0.9rem;
+    max-width: 197px;
+    opacity: 0.8;
+    line-height: 1.5;
+}
