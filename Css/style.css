@@ -41,6 +41,7 @@ body {
     display: grid;
     border-radius: 15px;
     overflow: hidden;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.3);
 }
 
 .padding {
@@ -66,7 +67,7 @@ body {
  } 
 
 .header__paragraph {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     line-height: 1.8;
     color: var(--grayish-blue);
     opacity: 0.8;
@@ -114,12 +115,15 @@ body {
     font-size: 1rem;
     letter-spacing: 2px;
     font-weight: 700;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.4);
+    transition: all 0.4s;
 }
 
 .action__btn:hover {
     filter: brightness(1.2);
     color: initial;
     cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 .us {
@@ -139,4 +143,37 @@ body {
     max-width: 197px;
     opacity: 0.8;
     line-height: 1.5;
+}
+
+@media screen and (min-width: 40rem) {
+    .single-price {
+        grid-template-columns: 1.1fr 0.9fr;
+        grid-template-areas: 
+            "header header"
+            "section1 section2";
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .action {
+        grid-area: section1;
+    }
+
+    .us{
+        grid-area: section2;
+    }
+
+    .padding {
+        padding: 2.8rem 2.4rem;
+    }
+
+    .header__paragraph {
+        max-width: 32.2rem;
+    }
+
+    .action__title {
+        margin-bottom: 1.3rem;
+    }
 }
